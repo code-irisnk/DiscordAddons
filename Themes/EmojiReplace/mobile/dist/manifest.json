@@ -1,0 +1,14 @@
+{
+    "name": "EmojiReplace (Google)",
+    "description": "Replaces Discord's emoji with Google's emoji. Mobile port of the EmojiReplace theme.",
+    "authors": [
+        {
+            "name": "Iris Nkrichronos"
+        }
+    ],
+    "main": "index.js",
+    "hash": "8652ca7392894e4aaa90f851821c7c6fd98b049c53558910de7cf1fcea4e0b07",
+    "vendetta": {
+        "icon": "SuperReactionIcon"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "emoji-replace-mobile",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "node scripts/build.mjs"
+    },
+    "devDependencies": {
+        "discord-emoji": "^2.0.0",
+        "emoji-datasource": "^16.0.0"
+    }
+}
