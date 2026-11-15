@@ -17,32 +17,32 @@ Replaces Discord's Emojis with Emojis of a different Provider (Apple, Facebook..
 
 Apple:
 
-![screenshot1](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot1.png)
+![screenshot1](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot1.png)
 
 Facebook:
 
-![screenshot2](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot2.png)
+![screenshot2](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot2.png)
 
 Google:
 
-![screenshot3](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot3.png)
+![screenshot3](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot3.png)
 
 JoyPixels:
 
-![screenshot4](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot4.png)
+![screenshot4](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot4.png)
 
 Microsoft:
 
-![screenshot5](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot5.png)
+![screenshot5](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot5.png)
 
 OpenMoji:
 
-![screenshot6](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot6.png)
+![screenshot6](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot6.png)
 
 Samsung:
 
-![screenshot6](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot7.png)
+![screenshot6](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot7.png)
 
 WhatsApp:
 
-![screenshot7](https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/_res/screenshot8.png)
+![screenshot7](https://code-irisnk.github.io/DiscordAddons/Themes/EmojiReplace/_res/screenshot8.png)
