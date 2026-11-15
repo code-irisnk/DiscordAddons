@@ -6,6 +6,12 @@
     const { before } = vendetta.patcher;
 
     const BASE = "__BASE__";
+    const DEBUG = true; // temporary: toasts show which stage fails
+    const stats = { calls: 0, emojiRows: 0, converted: 0, unmapped: 0, imageHits: 0 };
+    function toast(msg) {
+        if (!DEBUG) return;
+        try { vendetta.ui.toasts.showToast("EmojiReplace: " + msg); } catch (e) { console.log("[EmojiReplace]", msg); }
+    }
     // "<hex>-<hex>" (fe0f removed) -> "<category>/<name>.png"
     const MAP = __MAP__;
 
@@ -38,9 +44,12 @@
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
             if (!row || typeof row !== "object") continue;
-            if (row.type === "emoji" && typeof row.surrogate === "string") {
-                const src = urlForSurrogate(row.surrogate);
+            if (row.type === "emoji") {
+                stats.emojiRows++;
+                const src = typeof row.surrogate === "string" ? urlForSurrogate(row.surrogate) : undefined;
+                if (!src) stats.unmapped++;
                 if (src) {
+                    stats.converted++;
                     rows[i] = { type: "customEmoji", id: "0", alt: row.surrogate, src, frozenSrc: src, jumboable: row.jumboable };
                 }
                 continue;
@@ -56,15 +65,19 @@
     return {
         onLoad() {
             const chat = getNativeModule("NativeChatModule", "DCDChatManager");
+            toast(chat?.updateRows ? "chat module found" : "chat module NOT found");
             if (chat?.updateRows) {
                 unpatchRows = before("updateRows", chat, args => {
                     try {
+                        stats.calls++;
                         const rows = JSON.parse(args[1]);
                         for (const row of rows) {
                             if (row?.type === 1 && Array.isArray(row.message?.content)) convertRows(row.message.content);
                         }
                         args[1] = JSON.stringify(rows);
+                        if (stats.emojiRows && (stats.calls <= 3 || stats.converted === 1)) toast(`rows ${stats.calls}, emoji ${stats.emojiRows}, converted ${stats.converted}, unmapped ${stats.unmapped}`);
                     } catch (e) {
+                        toast("row patch error: " + (e && e.message));
                         console.error("[EmojiReplace] row patch failed", e);
                     }
                 });
@@ -79,6 +92,7 @@
 
                 const file = lookup(uri);
                 if (!file) return; // unknown emoji: keep Discord's own
+                if (++stats.imageHits === 1) toast("Image patch hit");
 
                 return [{ ...props, source: { ...props.source, uri: BASE + file } }, ...args.slice(1)];
             });

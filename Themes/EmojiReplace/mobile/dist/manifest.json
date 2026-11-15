@@ -3,11 +3,11 @@
     "description": "Replaces Discord's emoji with Google's emoji. Mobile port of the EmojiReplace theme.",
     "authors": [
         {
-            "name": "irisnk.me"
+            "name": "Iris Nkrichronos"
         }
     ],
     "main": "index.js",
-    "hash": "0298b86a63a226068f595f3f1381820c8eb034962707070de9c1f133fc49cef2",
+    "hash": "32d5b0caab652de825c07f5a8c67881ed86a7d521358fd09d02f84105f8af766",
     "vendetta": {
         "icon": "SuperReactionIcon"
     }
