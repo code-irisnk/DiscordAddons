@@ -3,7 +3,7 @@
     "description": "Replaces Discord's emoji with Google's emoji. Mobile port of the EmojiReplace theme.",
     "authors": [
         {
-            "name": "Iris Nkrichronos"
+            "name": "irisnk.me"
         }
     ],
     "main": "index.js",
